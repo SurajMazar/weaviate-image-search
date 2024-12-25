@@ -1,4 +1,4 @@
 node_modules
 .idea
-./weaviate_data
+weaviate_data
 .env
