@@ -18,6 +18,8 @@ class DogService {
         const results = await dogCollection.query.nearImage(imageB64, {
             returnProperties: ['title', 'image'],
             limit: 5,
+            returnMetadata: ['distance'],
+            // includeVector:true
         })
         await weaviateInstance.close()
         return results?.objects
